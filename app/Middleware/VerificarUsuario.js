@@ -15,7 +15,7 @@ class VerificarUsuario {
   
     if(!user){
       return response.json({
-        mensaje:"Permiso denegado, no esta registrado"
+        mensaje:"El usuario no existe"
       })
     }
     else{
