@@ -20,7 +20,7 @@ Route.get('/', () => {
   return { greeting: 'Hello world in JSON' }
 })
 Route.get('/user','UserController.index').middleware(['checkuser'])
-Route.post('/agregar/usuario','UserController.insert').middleware(['checkedad'])
+Route.post('/agregar/usuario','UserController.insert').validator('EdadUsuario').middleware(['checkedad'])
 Route.get('/ver/usuario/:id','UserController.select').middleware(['checkuser'])
 Route.delete('/borrar/usuario/:id','UserController.delete').middleware(['checkuser'])
 Route.put('/modificar/usuario/:id','UserController.update').middleware(['checkusuario'])
